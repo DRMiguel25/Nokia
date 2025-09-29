@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nokia: La Empresa y Su Proceso de Reingeniería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-dot {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .nav-dot.active {
+            background-color: #2563eb;
+            transform: scale(1.25);
+        }
+        .btn-nav {
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn-nav:hover {
+            transform: translateY(-2px);
+        }
+        .gemini-result ul {
+            list-style-position: inside;
+            list-style-type: disc;
+            padding-left: 1rem;
+        }
+        .gemini-result li::marker {
+            color: #93c5fd; /* Light blue marker for visibility */
+        }
+        /* Animación flotante */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        .floating-image {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+
+    <div class="w-full max-w-4xl mx-auto">
+        <div id="presentation-container" class="bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl shadow-blue-500/10 overflow-hidden relative">
+            <div class="p-6 sm:p-8 md:p-10 min-h-[680px] flex flex-col">
+
+                <!-- Slide 1: Título -->
+                <div class="slide active">
+                    <div class="flex flex-col justify-center items-center h-full text-center">
+                        <img src="https://placehold.co/150x80/111827/FFFFFF?text=NOKIA" alt="Logo de Nokia" class="mb-6 rounded">
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">Nokia: La Empresa y Su Proceso de Reingeniería</h1>
+                        <p class="text-lg text-gray-400 max-w-2xl">Una presentación interactiva sobre la reinvención de un gigante tecnológico.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2: ¿Qué es Nokia? -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-4">¿Qué es la Empresa Nokia?</h2>
+                    <div class="flex flex-col md:flex-row gap-6 items-center mt-6">
+                        <div class="md:w-2/3 space-y-4 text-gray-300 text-base sm:text-lg">
+                            <p>Nokia es una multinacional finlandesa de telecomunicaciones e infraestructura tecnológica fundada en 1865 por Fredrik Idestam como una fábrica de pulpa de papel.</p>
+                            <p class="border-l-4 border-blue-400 pl-4 bg-gray-700/50 p-4 rounded-lg">Su característica más notable es su capacidad de reinvención constante durante 160 años, habiendo transitado desde la industria papelera hasta convertirse en líder mundial de infraestructura 5G/6G.</p>
+                        </div>
+                        <div class="md:w-1/3">
+                           <img src="https://c8.alamy.com/comp/2F77J7E/nokia-paper-and-cellulose-factory-finland-2F77J7E.jpg" alt="Antigua fábrica de papel de Nokia" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Transformaciones Históricas -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Transformaciones Históricas de Nokia</h2>
+                    <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                        <ul class="space-y-4 text-gray-300 md:w-2/3">
+                            <li class="flex items-start"><span class="bg-blue-500 text-white rounded-full h-8 w-8 text-sm font-bold flex items-center justify-center mr-4 shrink-0 mt-1">1</span><div><strong class="text-white">1865-1967:</strong> Papel → Caucho → Cables → Electrónica</div></li>
+                            <li class="flex items-start"><span class="bg-blue-500 text-white rounded-full h-8 w-8 text-sm font-bold flex items-center justify-center mr-4 shrink-0 mt-1">2</span><div><strong class="text-white">1967:</strong> Fusión Nokia Corporation</div></li>
+                            <li class="flex items-start"><span class="bg-blue-500 text-white rounded-full h-8 w-8 text-sm font-bold flex items-center justify-center mr-4 shrink-0 mt-1">3</span><div><strong class="text-white">1980s-2011:</strong> Era dorada de telefonía móvil (40% cuota mundial)</div></li>
+                            <li class="flex items-start"><span class="bg-blue-500 text-white rounded-full h-8 w-8 text-sm font-bold flex items-center justify-center mr-4 shrink-0 mt-1">4</span><div><strong class="text-white">2011-2014:</strong> Crisis y venta división móvil</div></li>
+                            <li class="flex items-start"><span class="bg-blue-500 text-white rounded-full h-8 w-8 text-sm font-bold flex items-center justify-center mr-4 shrink-0 mt-1">5</span><div><strong class="text-white">2014-presente:</strong> Infraestructura redes 5G/6G e I+D</div></li>
+                        </ul>
+                        <div class="md:w-1/3">
+                            <img src="https://blogthinkbig.com/wp-content/uploads/sites/4/2019/03/Nokia-Phones-Wikipedia.jpg?resize=500%2C330" alt="Teléfonos clásicos de Nokia" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: El Proceso de Reingeniería -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-4">El Proceso de Reingeniería de Nokia</h2>
+                    <img src="https://placehold.co/800x150/1f2937/9ca3af?text=Business+Process+Reengineering" alt="Diagrama de BPR" class="rounded-lg shadow-lg my-6 w-full object-cover h-32">
+                    <div class="space-y-4 text-gray-300 text-base sm:text-lg">
+                        <p>Nokia aplicó <strong class="text-white">Business Process Reengineering (BPR)</strong>, una metodología para rediseñar radicalmente los procesos empresariales fundamentales con el objetivo de lograr mejoras dramáticas en costos, calidad, servicio y velocidad.</p>
+                        <p class="border-l-4 border-blue-400 pl-4 bg-gray-700/50 p-4 rounded-lg">La característica clave del BPR es el cambio <strong class="text-white">radical</strong>, no incremental.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Fase 1: Diagnóstico -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-4">Fase 1: Diagnóstico (2008-2010)</h2>
+                    <div class="flex flex-col md:flex-row gap-6 items-start mt-4">
+                        <div class="md:w-2/3">
+                            <p class="text-gray-400 mb-4">El documento clave fue la carta <strong class="text-white">"Burning Platform"</strong> del 8 de febrero de 2011, enviada por el CEO Stephen Elop a todos los empleados, usando la metáfora de una plataforma petrolífera en llamas para describir la situación de Nokia.</p>
+                            <h3 class="font-semibold text-white mb-3">Diagnóstico de la situación identificado:</h3>
+                            <ul class="list-disc list-inside space-y-1 text-gray-300 text-sm">
+                                <li>Plataforma Symbian obsoleta versus tecnología touchscreen</li>
+                                <li>Organización burocrática con "departamentos como reinos independientes"</li>
+                                <li>Cultura organizacional tóxica y falta de comunicación efectiva</li>
+                                <li>Falta de alineación y liderazgo para dirigir la empresa</li>
+                                <li>Procesos de innovación lentos comparados con la competencia</li>
+                                <li>Resistencia interna sistemática al cambio</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/3">
+                            <img src="https://static.ffx.io/images/$zoom_1%2C$multiply_0.6284%2C$ratio_1.777778%2C$width_1273%2C$x_7%2C$y_2/t_crop_custom/q_86%2Cf_auto/c554b06821d6fb0d240ee3d2d739bbd5fe2b96a3" alt="Plataforma en llamas" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Fase 2: Análisis de Procesos -->
+                <div class="slide">
+                     <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-4">Fase 2: Análisis de Procesos</h2>
+                     <img src="https://placehold.co/800x120/1f2937/9ca3af?text=Dispositivos+vs+Ecosistemas" alt="Ecosistemas vs Dispositivos" class="rounded-lg shadow-lg my-4 w-full object-cover h-24">
+                     <p class="text-gray-400 mb-4 text-center italic">Elop identificó que <strong class="text-white">"la guerra cambió: ya no es entre dispositivos sino entre ecosistemas"</strong>.</p>
+                     <div class="grid md:grid-cols-2 gap-4 text-sm">
+                         <div>
+                             <h3 class="font-semibold text-white mb-2 border-b border-gray-600 pb-1">Problemas Detectados</h3>
+                             <ul class="list-disc list-inside space-y-1 text-gray-300">
+                                 <li>Competidores ganando con ecosistemas</li>
+                                 <li>Enfoque obsoleto en dispositivos</li>
+                                 <li>Procesos de desarrollo lentos</li>
+                                 <li>Falta de colaboración interna</li>
+                             </ul>
+                         </div>
+                         <div>
+                             <h3 class="font-semibold text-white mb-2 border-b border-gray-600 pb-1">Impacto Cuantificado</h3>
+                              <ul class="list-disc list-inside space-y-1 text-gray-300">
+                                <li>Caída de cuota de mercado UK</li>
+                                <li>iPhone domina el mercado premium</li>
+                                <li>Android se convierte en líder</li>
+                                <li>Riesgo de downgrade crediticio</li>
+                             </ul>
+                         </div>
+                     </div>
+                </div>
+
+                <!-- Slide 7: Fase 3: Rediseño Radical -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-4">Fase 3: Rediseño Radical</h2>
+                    <p class="text-gray-400 mb-4 text-center">La decisión estratégica crítica del 11 de febrero de 2011: <strong class="text-white">el abandono completo de la plataforma propia</strong>.</p>
+                    <img src="https://placehold.co/800x150/1f2937/9ca3af?text=Symbian+%2B+MeeGo+%E2%86%92+Windows+Phone" alt="Cambio a Windows Phone" class="rounded-lg shadow-lg my-4 w-full object-cover h-32">
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 mb-4">
+                         <li><strong class="text-red-400">ELIMINACIÓN</strong> total de Symbian y <strong class="text-red-400">ABANDONO</strong> de MeeGo.</li>
+                         <li><strong class="text-green-400">ADOPCIÓN</strong> de Windows Phone (alianza con Microsoft).</li>
+                         <li><strong class="text-yellow-400">REDISEÑO</strong> organizacional y <strong class="text-yellow-400">CAMBIO</strong> del modelo de negocio.</li>
+                     </ul>
+                     <p class="border-l-4 border-red-500 pl-4 bg-gray-700/50 p-4 rounded-lg">Reingeniería <strong class="text-white">RADICAL</strong>: "obliteración completa de procesos existentes", siguiendo el principio de Michael Hammer <strong class="text-white">"Don't automate, Obliterate"</strong>.</p>
+                     <div class="mt-6 text-center">
+                        <button class="gemini-btn btn-nav bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg inline-flex items-center shadow-md">
+                            ✨ Analizar Riesgos y Recompensas
+                        </button>
+                        <div class="gemini-result-container mt-4 p-4 bg-gray-700/50 border border-gray-600 rounded-lg hidden text-left">
+                            <div class="gemini-loader text-center">Analizando...</div>
+                            <div class="gemini-result text-gray-300"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 8: Fase 4: Implementación -->
+                <div class="slide">
+                     <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-4">Fase 4: Implementación</h2>
+                     <img src="https://placehold.co/800x150/1f2937/9ca3af?text=Implementaci%C3%B3n+y+Gesti%C3%B3n+del+Cambio" alt="Implementación del cambio" class="rounded-lg shadow-lg my-6 w-full object-cover h-32">
+                     <div class="grid md:grid-cols-2 gap-6">
+                         <div>
+                            <h3 class="font-semibold text-white mb-3">Metodologías aplicadas:</h3>
+                             <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                 <li>Business Process Reengineering (BPR)</li>
+                                 <li>Change Management & Restructuring</li>
+                                 <li>Technology Enablement & Downsizing</li>
+                             </ul>
+                         </div>
+                         <div>
+                             <h3 class="font-semibold text-white mb-3">Herramientas de soporte utilizadas:</h3>
+                             <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                 <li>Process Mapping & Cross-functional teams</li>
+                                 <li>Communication strategy ("Burning Platform")</li>
+                                 <li>Training programs</li>
+                             </ul>
+                         </div>
+                     </div>
+                </div>
+
+                <!-- Slide 9: ¿Cómo Funcionó? Corto Plazo -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-red-400 mb-4">¿Cómo Funcionó? Fase Corto Plazo (2011-2013)</h2>
+                    <div class="bg-red-900/20 border border-red-500 p-6 rounded-lg flex flex-col md:flex-row gap-6 items-center">
+                        <div class="md:w-1/3">
+                            <img src="https://wordpress-bucket.nyc3.cdn.digitaloceanspaces.com/2024/09/e308ae_77f4e3c62bc74248ae65e02f75038d71mv2.jpg" alt="Gráfico de acciones en caída" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-xl font-bold text-white mb-4">FRACASO OPERACIONAL</h3>
+                            <ul class="list-disc list-inside space-y-2 text-red-200 text-sm">
+                                <li>Fracaso comercial de Windows Phone.</li>
+                                <li>Périda acelerada de cuota de mercado.</li>
+                                <li>Caída del valor de acciones del 92.5%.</li>
+                                <li>Despidos masivos de empleados.</li>
+                                <li>Venta forzada de división móvil a Microsoft.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 10: ¿Cómo Funcionó? Mediano Plazo -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4">¿Cómo Funcionó? Fase Mediano Plazo (2014-2020)</h2>
+                    <div class="bg-yellow-900/20 border border-yellow-500 p-6 rounded-lg flex flex-col md:flex-row gap-6 items-center">
+                         <div class="md:w-1/3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCaKK4ZJLgUDKWgNWll_4YZlX6fZX0ZVgolQ&s" alt="Infraestructura de telecomunicaciones" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        </div>
+                        <div class="md:w-2/3">
+                             <h3 class="text-xl font-bold text-white mb-4">ÉXITO ESTRATÉGICO PARCIAL</h3>
+                             <ul class="list-disc list-inside space-y-2 text-yellow-200 text-sm">
+                                <li>Especialización en infraestructura (Nokia Networks).</li>
+                                <li>Enfoque en I+D y patentes (Nokia Technologies).</li>
+                                <li>Salida del mercado de smartphones de consumo.</li>
+                                <li>Enfoque en mercados B2B (empresas e industria).</li>
+                                <li>Desarrollo de capacidades 5G pioneras.</li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 11: ¿Cómo Funcionó? Largo Plazo -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-green-400 mb-4">¿Cómo Funcionó? Fase Largo Plazo (2020-2025)</h2>
+                     <div class="bg-green-900/20 border border-green-500 p-6 rounded-lg flex flex-col md:flex-row gap-6 items-center">
+                         <div class="md:w-1/3">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbVGHWTkmOR1DdlCZBvmAxQfZYvb8QCvKiqg&s" alt="Liderazgo en 5G y 6G" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                        </div>
+                        <div class="md:w-2/3">
+                             <h3 class="text-xl font-bold text-white mb-4">ÉXITO TRANSFORMACIONAL</h3>
+                             <ul class="list-disc list-inside space-y-2 text-green-200 text-sm">
+                                 <li>Líder mundial en infraestructura 5G/6G.</li>
+                                 <li>Nokia Bell Labs como centro de I+D de élite.</li>
+                                 <li>Contratos emblemáticos (Red 4G en la Luna para NASA).</li>
+                                 <li>Nuevas divisiones estratégicas (IA, Tecnología).</li>
+                                 <li>Estrategia ESG integrada y sostenibilidad.</li>
+                             </ul>
+                        </div>
+                     </div>
+                </div>
+
+                <!-- Slide 12: Lecciones del Proceso -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Lecciones del Proceso de Reingeniería Nokia</h2>
+                    <img src="https://placehold.co/800x120/1f2937/9ca3af?text=Lecciones+Aprendidas" alt="Lecciones del Proceso" class="rounded-lg shadow-lg mb-6 w-full object-cover h-24">
+                     <ul class="space-y-3 text-gray-300 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                        <li><strong>IDENTIFICACIÓN ≠ ACCIÓN:</strong> Actuar tarde anula la correcta identificación de amenazas.</li>
+                        <li><strong>REINGENIERÍA RADICAL:</strong> A veces, la destrucción de lo exitoso es necesaria para sobrevivir.</li>
+                        <li><strong>RIESGO TRANSFORMACIONAL:</strong> El BPR puede fracasar a corto plazo pero triunfar a largo plazo.</li>
+                        <li><strong>LIDERAZGO CRÍTICO:</strong> Un liderazgo decidido es clave para cambios drásticos.</li>
+                        <li><strong>CAMBIO CULTURAL:</strong> La resistencia interna es el mayor obstáculo.</li>
+                        <li><strong>ECOSISTEMAS > PRODUCTOS:</strong> El modelo de competencia cambió.</li>
+                        <li><strong>SUPERVIVENCIA EMPRESARIAL:</strong> La reingeniería salvó a Nokia.</li>
+                    </ul>
+                    <div class="mt-6 text-center">
+                        <button class="gemini-btn btn-nav bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg inline-flex items-center shadow-md">
+                            ✨ Generar Consejos para CEOs
+                        </button>
+                        <div class="gemini-result-container mt-4 p-4 bg-gray-700/50 border border-gray-600 rounded-lg hidden text-left">
+                            <div class="gemini-loader text-center">Generando...</div>
+                            <div class="gemini-result text-gray-300"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 13: Conclusión -->
+                <div class="slide">
+                     <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-4">Conclusión</h2>
+                     <img src="https://placehold.co/800x120/1f2937/9ca3af?text=De+M%C3%B3viles+a+Redes" alt="Transformación de Nokia" class="rounded-lg shadow-lg my-4 w-full object-cover h-24">
+                     <div class="space-y-4 text-gray-300 text-base sm:text-lg">
+                         <p>Nokia aplicó BPR de forma <strong class="text-white">RADICAL</strong>: destruyó sus procesos exitosos para crear una empresa nueva.</p>
+                         <p>Aunque fracasó en móviles, la reingeniería permitió su supervivencia y transformación en líder mundial de infraestructura 5G/6G.</p>
+                         <p class="border-l-4 border-blue-400 pl-4 bg-gray-700/50 p-4 rounded-lg">Es un caso único de reinvención que demuestra que a veces es necesario <strong class="text-white">"quemar la plataforma"</strong> para sobrevivir y cambiar completamente la identidad corporativa.</p>
+                     </div>
+                     <div class="mt-6 text-center">
+                        <button class="gemini-btn btn-nav bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg inline-flex items-center shadow-md">
+                            ✨ Explorar Escenario Alternativo
+                        </button>
+                        <div class="gemini-result-container mt-4 p-4 bg-gray-700/50 border border-gray-600 rounded-lg hidden text-left">
+                            <div class="gemini-loader text-center">Explorando...</div>
+                            <div class="gemini-result text-gray-300"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 14: Cómo funcionó el BPR Radical -->
+                <div class="slide">
+                     <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-2">El BPR Radical de Nokia: ¿Cómo Funcionó?</h2>
+                     <img src="https://placehold.co/800x100/1f2937/9ca3af?text=Estrategia+de+Reconstrucci%C3%B3n" alt="Estrategia de Reconstrucción" class="rounded-lg shadow-lg my-2 w-full object-cover h-24">
+                     <div class="space-y-2 text-gray-300 text-sm">
+                         <p class="mb-2">El BPR de Nokia no fue una simple mejora, fue una demolición y reconstrucción. Funcionó a través de cuatro pilares clave:</p>
+                         <ul class="list-disc list-inside space-y-2">
+                            <li><strong class="text-white">1. Obliteración, no Automatización:</strong> En lugar de intentar mejorar Symbian, lo eliminaron por completo. No buscaron eficiencias incrementales en un modelo de negocio obsoleto (venta de dispositivos), sino que lo abandonaron para centrarse en un nuevo modelo (ecosistemas y luego redes B2B).</li>
+                            <li><strong class="text-white">2. Rediseño Enfocado en el Futuro:</strong> La alianza con Microsoft no fue solo un cambio de software, fue una apuesta por el futuro del "ecosistema". Aunque esa apuesta fracasó, les obligó a pensar más allá del hardware y a reestructurar toda su cadena de valor, preparándolos para su futuro como empresa de infraestructura.</li>
+                            <li><strong class="text-white">3. Cambio Estructural y Cultural Forzado:</strong> El BPR fue acompañado de despidos masivos y una reestructuración total de divisiones. La carta "Burning Platform" no fue una sugerencia, fue una declaración de que el cambio no era negociable. Se rompieron los "reinos" internos y se forzó una nueva cultura, aunque fuera a un costo muy alto.</li>
+                             <li><strong class="text-white">4. Aceptación del Fracaso a Corto Plazo:</strong> La clave del éxito final fue que la venta de la división de móviles a Microsoft no se vio como el fin de Nokia, sino como el sacrificio necesario para salvar al resto de la compañía. Permitieron que la "plataforma en llamas" se consumiera para poder construir algo nuevo y más fuerte (Nokia Networks) con los recursos restantes.</li>
+                         </ul>
+                     </div>
+                </div>
+
+                <!-- NEW Slide 15: Galería de Imágenes del Proceso -->
+                <div class="slide">
+                     <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Galería de Imágenes del Proceso BPR</h2>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <img src="https://www.channelbiz.es/wp-content/uploads/2013/02/stephen_elop_nokia_141514345801_640x360.jpg" alt="Stephen Elop, CEO de Nokia" class="rounded-lg shadow-lg w-full h-auto floating-image">
+                            <p class="text-center text-sm text-gray-400">Stephen Elop, arquitecto de la transformación.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <img src="https://i.blogs.es/07d9ba/ballmer_elop_nokia/450_1000.jpg" alt="Alianza Nokia y Microsoft" class="rounded-lg shadow-lg w-full h-auto floating-image">
+                             <p class="text-center text-sm text-gray-400">La alianza estratégica con Microsoft.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <img src="https://lh5.googleusercontent.com/SMxAlpkwdDbAKeLn8ymnG8wAQs5ThDw8eQUPAVBVD7flXaQXiWNCmEyISvxrMW2Fngg4APjkE-KFunPZm8JVJNJNlhRKYCW37_cnt7iX_Jpz_7qsLJLkqwu8NE4GdE1askIPuaUO9S5x6z466jgk_tYpeMe3YOELIh8xKn3S7bEaR1IxRcSS6ElQTPU4Gg" alt="Nokia Networks 5G" class="rounded-lg shadow-lg w-full h-auto floating-image">
+                             <p class="text-center text-sm text-gray-400">El nuevo enfoque en infraestructura 5G.</p>
+                        </div>
+                         <div class="space-y-2">
+                            <img src="https://i.redd.it/nokia-bell-labs-murray-hill-nj-in-1940s-and-2022-v0-wmr1tf30udg91.jpg?width=1280&format=pjpg&auto=webp&s=9684bdf51816c6bf3fa2cf101334e103ee815663" alt="Nokia Bell Labs" class="rounded-lg shadow-lg w-full h-auto floating-image">
+                             <p class="text-center text-sm text-gray-400">Nokia Bell Labs, pilar de la innovación.</p>
+                        </div>
+                     </div>
+                </div>
+                
+                 <!-- Slide 16: Fuentes (was 15) -->
+                <div class="slide">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-400 mb-6">Fuentes</h2>
+                    <div class="h-[450px] overflow-y-auto pr-4 text-sm">
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li><a href="https://introneuromarketing.weebly.com/historia-de-nokia.html" target="_blank" class="hover:text-blue-400">introneuromarketing.weebly.com</a></li>
+                            <li><a href="https://www.estrategiamagazine.com/glosario-de-marcas-famosas/nokia-historia-logos-vision-estrategia/" target="_blank" class="hover:text-blue-400">estrategiamagazine.com</a></li>
+                            <li><a href="https://finland.fi/es/neegocios-amp-innovacion/nokia-la-tradicion-de-adaptarse/" target="_blank" class="hover:text-blue-400">finland.fi</a></li>
+                            <li><a href="https://es.wikipedia.org/wiki/Nokia" target="_blank" class="hover:text-blue-400">es.wikipedia.org/wiki/Nokia</a></li>
+                            <li><a href="https://evalueconsultores.com/nokia-innovacion-lider/" target="_blank" class="hover:text-blue-400">evalueconsultores.com</a></li>
+                            <li><a href="https://www.elconfidencial.com/alma-corazon-vida/2015-09-24/la-razon-del-hundimiento-de-nokia-y-es-algo-que-pasa-todos-los-dias-en-tu-empresa_1033982/" target="_blank" class="hover:text-blue-400">elconfidencial.com</a></li>
+                            <li><a href="https://iceebook.com/nokia-se-reestructura-crea-divisiones-de-inteligencia-artificial-y-desarrollo-corporativo" target="_blank" class="hover:text-blue-400">iceebook.com</a></li>
+                             <li><a href="https://sriramk.com/memos/elop-burning-platforms.pdf" target="_blank" class="hover:text-blue-400">sriramk.com/memos/elop-burning-platforms.pdf</a></li>
+                            <li><a href="https://www.studysmarter.es/resumenes/ciencias-empresariales/estudios-de-casos-empresariales/gestion-del-cambio-de-nokia/" target="_blank" class="hover:text-blue-400">studysmarter.es</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Navegación -->
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gray-800/50 backdrop-blur-sm border-t border-gray-700">
+                <div class="flex justify-between items-center max-w-3xl mx-auto">
+                    <button id="prevBtn" class="btn-nav bg-gray-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg flex items-center shadow-md disabled:opacity-50 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        Anterior
+                    </button>
+                    <div id="nav-dots" class="flex items-center justify-center space-x-2">
+                        <!-- Dots se generan dinámicamente -->
+                    </div>
+                    <button id="nextBtn" class="btn-nav bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg flex items-center shadow-md">
+                        Siguiente
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const navDotsContainer = document.getElementById('nav-dots');
+            let currentSlide = 0;
+            
+            // Crear navigation dots
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.classList.add('nav-dot', 'w-3', 'h-3', 'bg-gray-600', 'rounded-full', 'hover:bg-gray-400');
+                dot.addEventListener('click', () => {
+                    goToSlide(i);
+                });
+                navDotsContainer.appendChild(dot);
+            });
+
+            const dots = navDotsContainer.querySelectorAll('.nav-dot');
+
+            function goToSlide(slideNumber) {
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('active');
+                currentSlide = slideNumber;
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+                updateButtons();
+            }
+
+            function updateButtons() {
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === slides.length - 1;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    goToSlide(currentSlide + 1);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    goToSlide(currentSlide - 1);
+                }
+            });
+
+            // Inicializar la presentación
+            goToSlide(0);
+
+            // Funcionalidad de Gemini API
+            const geminiButtons = document.querySelectorAll('.gemini-btn');
+            const API_KEY = ""; // La API Key se inyectará en el entorno de ejecución, no es necesaria aquí.
+            const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
+
+            async function callGeminiAPI(prompt, button) {
+                const resultContainer = button.nextElementSibling;
+                const loader = resultContainer.querySelector('.gemini-loader');
+                const resultDiv = resultContainer.querySelector('.gemini-result');
+
+                resultContainer.style.display = 'block';
+                loader.style.display = 'block';
+                resultDiv.innerHTML = '';
+                button.disabled = true;
+
+                try {
+                    const payload = {
+                        contents: [{ parts: [{ text: prompt }] }],
+                    };
+
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Error en la API: ${response.statusText}`);
+                    }
+
+                    const data = await response.json();
+                    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                    if (text) {
+                        let htmlText = text.replace(/(\r\n|\n|\r)/g, '<br>');
+                        htmlText = htmlText.replace(/\* (.*?)(<br>|$)/g, '<li>$1</li>');
+                        // Si hay elementos li, los envolvemos en un ul
+                        if (htmlText.includes('<li>')) {
+                           resultDiv.innerHTML = `<ul>${htmlText}</ul>`;
+                        } else {
+                           resultDiv.innerHTML = `<p>${htmlText}</p>`;
+                        }
+                    } else {
+                        throw new Error('No se recibió contenido en la respuesta de la API.');
+                    }
+
+                } catch (error) {
+                    console.error("Error al llamar a la API de Gemini:", error);
+                    resultDiv.innerHTML = `<p class="text-red-400">Hubo un error al procesar la solicitud. Por favor, inténtelo de nuevo más tarde.</p>`;
+                } finally {
+                    loader.style.display = 'none';
+                    button.disabled = false;
+                }
+            }
+
+            geminiButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const slide = button.closest('.slide');
+                    const slideIndex = Array.from(document.querySelectorAll('.slide')).indexOf(slide);
+                    let contextText = slide.innerText.split('✨')[0].trim();
+                    let prompt;
+
+                    switch (slideIndex) {
+                        case 6: // Slide 7: Fase 3: Rediseño Radical
+                            prompt = `Eres un experto en estrategia empresarial. Basado en esta información sobre el rediseño radical de Nokia: "${contextText}". Analiza brevemente los principales riesgos y las posibles recompensas de esta estrategia en 2-3 puntos concisos.`;
+                            break;
+                        case 11: // Slide 12: Lecciones del Proceso
+                            prompt = `Eres un consultor de negocios. Transforma estas lecciones del proceso de reingeniería de Nokia: "${contextText}". en 3 consejos prácticos y accionables para un CEO de tecnología moderno.`;
+                            break;
+                        case 12: // Slide 13: Conclusión
+                            prompt = `Eres un historiador de negocios. Basado en esta conclusión sobre la historia de Nokia: "${contextText}". Especula brevemente en un párrafo sobre qué podría haber sucedido si Nokia hubiera elegido adoptar Android en 2011 en lugar de Windows Phone.`;
+                            break;
+                    }
+                    
+                    if (prompt) {
+                        callGeminiAPI(prompt, button);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
